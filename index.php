@@ -27,23 +27,7 @@
 ?>
 <html>
    
-   <head>
-      <title>Login Page</title>
-      
-      <style type = "text/css">
-         body {
-            font-family:Arial, Helvetica, sans-serif;
-            font-size:14px;
-         }
-         label {
-            font-weight:bold;
-            width:100px;
-            font-size:14px;
-         }
-         .box {
-            border:#666666 solid 1px;
-         }
-      </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
       
    </head>
    

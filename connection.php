@@ -10,5 +10,5 @@ if (!$db) {
     die("Připojení selhalo: " . mysqli_connect_error());
     }
 
-echo "Úspěšné připojení k MySQL serveru";
+echo "";
 ?>
