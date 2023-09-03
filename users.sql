@@ -7,10 +7,13 @@ SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `jmeno` varchar(40) NOT NULL,
-  `heslo` varchar(40) NOT NULL
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(40) NOT NULL,
+  `password` varchar(40) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+INSERT INTO `users` (`id`, `name`, `password`) VALUES
+(1,	'root',	'root');
 
--- 2023-08-21 01:23:12
+-- 2023-09-03 21:48:24
