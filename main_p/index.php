@@ -1,11 +1,11 @@
 <?php
-   include("session.php");
-   include("menu.php");
+   include("../security/session.php");
+   include("../menu/index.php");
 ?>
 <html>
    
    <head>
-      <title>Welcome </title>
+      <title>Welcome</title>
    </head>
 
    <body>

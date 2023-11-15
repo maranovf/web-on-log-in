@@ -1,5 +1,5 @@
 <?php
-   include("connection.php");
+   include("../security/connection.php");
    session_start();
    
    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -18,18 +18,19 @@
 		
       if($count == 1) {
          $_SESSION['login_user'] = $myusername;
+         $_SESSION['login_user_password'] = $mypassword;
          
-         header("location: admin.php");
+         header("location:../main_p/");
       }
       else {
-         $error = "Your Login Name or Password is invalid";
       }
    }
 ?>
 <html>
    <head>
    
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
       
    </head>
    
