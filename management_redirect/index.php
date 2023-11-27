@@ -15,7 +15,7 @@ if ($roww['admin']==1){
  header("location:../usr_management/");
                         }
                         elseif ($roww['admin']==0) {
-			 header("location:../semi_public/");
+			 header("location:../acc_management/");
                         }
 
 ?>
