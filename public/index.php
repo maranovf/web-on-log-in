@@ -10,8 +10,12 @@
       
       $sql_username = "SELECT name FROM users WHERE name = '$myusername'";
       $sql_password = "SELECT password FROM users WHERE password = '$mypassword'";
+
+
       $result_username = mysqli_query($db,$sql_username);
       $result_password = mysqli_query($db,$sql_password);
+
+
       $row_username = mysqli_fetch_array($result_username,MYSQLI_ASSOC);
       $row_password = mysqli_fetch_array($result_password,MYSQLI_ASSOC);
       
@@ -58,11 +62,9 @@
                <form action = "" method = "post">
                   <label>Username  :</label><input type = "text" name = "name" class = "box"/><br /><br />
                   <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
-                  <input type = "submit" value = " Submit "/><br />
+                  <input type = "submit" value = " Log in "/><br />
                </form>
-               
-               
-					
+
             </div>
 				
          </div>

@@ -37,7 +37,6 @@ session_start();
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-      // username and password sent from form
 
       $username_new = mysqli_real_escape_string($db,$_POST['name']);
       $password_new = mysqli_real_escape_string($db,$_POST['password']);
