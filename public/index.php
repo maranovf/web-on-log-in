@@ -1,26 +1,39 @@
 <?php
    include("../security/connection.php");
+
    session_start();
-   
+
    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-      // username and password sent from form 
       
       $myusername = mysqli_real_escape_string($db,$_POST['name']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
       
-      $sql = "SELECT id FROM users WHERE name = '$myusername' and password = '$mypassword'";
-      $result = mysqli_query($db,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      $sql_username = "SELECT name FROM users WHERE name = '$myusername'";
+      $sql_password = "SELECT password FROM users WHERE password = '$mypassword'";
+      $result_username = mysqli_query($db,$sql_username);
+      $result_password = mysqli_query($db,$sql_password);
+      $row_username = mysqli_fetch_array($result_username,MYSQLI_ASSOC);
+      $row_password = mysqli_fetch_array($result_password,MYSQLI_ASSOC);
       
       
-      $count = mysqli_num_rows($result);
+      $count_username = mysqli_num_rows($result_username);
+      $count_password = mysqli_num_rows($result_password);
 
-		
-      if($count == 1) {
-         $_SESSION['login_user'] = $myusername;
-         $_SESSION['login_user_password'] = $mypassword;
+
+      if($count_username == 1) {
+        if($row_username == true) {
+        //verifies username
+            if($count_password == 1) {
+                if($row_password == true) {
+                //verifies password
+
+                    $_SESSION['login_user'] = $myusername;
+                    $_SESSION['login_user_password'] = $mypassword;
          
-         header("location:../main_p/");
+                    header("location:../main_p/");
+                    }
+                }
+            }
       }
       else {
       }

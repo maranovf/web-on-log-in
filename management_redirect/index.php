@@ -1,8 +1,11 @@
 <?php
 include ("../security/session.php");
 include ("../security/connection.php");
+session_start();
 
-$admin = "SELECT admin FROM users WHERE name='$login_session'";
+$logged_user = $_SESSION['login_user'];
+
+$admin = "select admin from users where name='$logged_user'";
 $admin_query = mysqli_query($db, $admin);
 if(! $admin_query )
 {

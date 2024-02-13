@@ -23,7 +23,7 @@ include ("../security/connection.php");
 $sql_comm = "SELECT * FROM users";
 $sql_exe = mysqli_query($db, $sql_comm);
 while($row = $sql_exe->fetch_assoc()) {
-  echo "<tr><td>".$row["id"]."</td><td>".$row["name"]."</td><td>".$row["last_name"]."</td><td>".$row["password"]."</td><td> ".$row["admin"]."</td></tr>";
+  echo "<tr><td>".$row["id"]."</td><td>".$row["name"]."</td><td>".$row["password"]."</td><td> ".$row["admin"]."</td></tr>";
   }
   echo "</table>";
 ?>
