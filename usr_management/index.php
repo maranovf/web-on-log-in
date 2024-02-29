@@ -5,7 +5,7 @@ include ("../security/connection.php");
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <link rel="stylesheet" type="text/css" href="../css/tables.css" />
         <title>User management</title>

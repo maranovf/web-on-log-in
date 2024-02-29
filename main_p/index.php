@@ -8,7 +8,7 @@ $logged_user = $_SESSION["login_user"];
 ?>
 
 
-<html>
+<html lang="en">
    
    <head>
       <title>Main page</title>
