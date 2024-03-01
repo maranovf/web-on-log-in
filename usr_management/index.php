@@ -7,6 +7,7 @@ include ("../security/connection.php");
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8" />
         <link rel="stylesheet" type="text/css" href="../css/tables.css" />
         <title>User management</title>
     </head>

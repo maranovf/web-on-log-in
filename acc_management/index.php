@@ -13,26 +13,29 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Edit account</title>
-</head>
-<body>
-<form action="#" method="post">
-  <div>
-    <h1 style="margin: 0.5%">Edit account</h1>
+    <head>
+        <meta charset="utf-8" />
+        <title>Edit account</title>
+    </head>
 
-    <label for="name" style="margin: 0.5%;"><b>Name</b></label>
-    <input type="text" style="margin: 0.5%;" value="<?php echo($user)?>" name="name" id="name" required>
+    <body>
+        <form action="#" method="post">
+            <div>
+                <h1 style="margin: 0.5%">Edit account</h1>
+
+                <label for="name" style="margin: 0.5%;"><b>Name</b></label>
+                <input type="text" style="margin: 0.5%;" value="<?php echo($user)?>" name="name" id="name" required>
 
 
-    <label for="password" style="margin: 0.5%;"><b>Password</b></label>
-    <input type="password" style="margin: 0.5%;" value="<?php echo($password)?>" name="password" id="password" required>
+                <label for="password" style="margin: 0.5%;"><b>Password</b></label>
+                <input type="password" style="margin: 0.5%;" value="<?php echo($password)?>" name="password" id="password" required>
 
-    <hr>
+                <hr>
 
-    <button style="margin: 1%;" type="submit">Submit</button>
-  </div>
-</form>
+                <button style="margin: 1%;" type="submit">Submit</button>
+            </div>
+        </form>
+    </body>
 </html>
 
 <?php
@@ -44,5 +47,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       $sql_update="update users set password ='$password_new' where password = '$password' ";
       $res = mysqli_query($db, $sql_update);
-}
+    }
 ?>

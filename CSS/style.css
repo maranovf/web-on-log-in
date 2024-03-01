@@ -2,11 +2,13 @@ body {
             font-family:Arial, Helvetica, sans-serif;
             font-size:14px;
          }
-         label {
+
+label {
             font-weight:bold;
             width:100px;
             font-size:14px;
          }
-         .box {
+
+.box {
             border:#333 solid 1px;
          }

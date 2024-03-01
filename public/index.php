@@ -6,7 +6,9 @@
    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       
       $myusername = mysqli_real_escape_string($db,$_POST['name']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+      $mypassword = mysqli_real_escape_string($db,$_POST['password']);
+
+      $name = $_POST['name'];
       
       $sql_username = "SELECT name FROM users WHERE name = '$myusername'";
       $sql_password = "SELECT password FROM users WHERE password = '$mypassword'";
@@ -18,8 +20,7 @@
 
       $row_username = mysqli_fetch_array($result_username,MYSQLI_ASSOC);
       $row_password = mysqli_fetch_array($result_password,MYSQLI_ASSOC);
-      
-      
+
       $count_username = mysqli_num_rows($result_username);
       $count_password = mysqli_num_rows($result_password);
 
@@ -46,10 +47,9 @@
 
 <html lang="en">
    <head>
-   
+    <meta charset="utf-8" />
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
-      
    </head>
    
    <body bgcolor = "#FFFFFF">

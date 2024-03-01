@@ -11,6 +11,7 @@ $logged_user = $_SESSION["login_user"];
 <html lang="en">
    
    <head>
+    <meta charset="utf-8" />
       <title>Main page</title>
    </head>
 
