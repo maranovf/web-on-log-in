@@ -45,7 +45,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $password_new = mysqli_real_escape_string($db,$_POST['password']);
 
 
-      $sql_update="update users set password ='$password_new' where password = '$password' ";
-      $res = mysqli_query($db, $sql_update);
+      $sql_password_update="update users set password ='$password_new' where password = '$password' ";
+      $res = mysqli_query($db, $sql_password_update);
+
+      $sql_name_update="update users set name ='$username_new' where name = '$user' ";
+      $res3 = mysqli_query($db, $sql_name_update);
     }
 ?>
