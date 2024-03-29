@@ -2,6 +2,7 @@
 include ("../menu/index.php");
 include ("../security/session.php");
 include ("../security/connection.php");
+include ("../management_menu/index.php");
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +14,6 @@ include ("../security/connection.php");
     </head>
 
     <body>
-        <a href="../usr_add/">Add user</a>
         <table class="tables">
             <tr>
                 <th>ID</th>

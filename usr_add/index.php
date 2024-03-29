@@ -1,6 +1,7 @@
 <?php
    include("../menu/index.php");
    include("../security/connection.php");
+   include ("../management_menu/index.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
