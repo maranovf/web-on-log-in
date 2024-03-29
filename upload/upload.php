@@ -1,11 +1,13 @@
 <?php
 include ("../security/data_connection.php");
+include ("../menu/index.php");
+include ("../security/session.php");
 
 $target_dir = "../downloads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $file = basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+$FileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 // Check if file already exists
 if (file_exists($target_file)) {
@@ -20,8 +22,8 @@ if ($_FILES["fileToUpload"]["size"] > 5000000) {
 }
 
 // Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "docx"
-&& $imageFileType != "zip" ) {
+if($FileType != "jpg" && $FileType != "png" && $FileType != "docx"
+&& $FileType != "zip" ) {
   echo "Sorry, only JPG, PNG, DOCX & ZIP files are allowed.";
   $uploadOk = 0;
 }
