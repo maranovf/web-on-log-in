@@ -13,8 +13,9 @@
 
     <ul>
         <li><a href = "../main_p/">Home</a></li>
-        <li><a href="../management_redirect/">Management</a></li>
+        <li><a href="../files">Files</a></li>
         <li><a href="../upload/">File upload</a></li>
+        <li><a href="../management_redirect/">Management</a></li>
         <li style="float:right"><a href = "../security/logout.php">Sign out</a></li>
     </ul>
 
