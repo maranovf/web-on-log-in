@@ -24,11 +24,11 @@ session_start();
                 <h1 style="margin: 0.5%">Edit account</h1>
 
                 <label for="name" style="margin: 0.5%;"><b>Name</b></label>
-                <input type="text" style="margin: 0.5%;" value="<?php echo($user)?>" name="name" id="name" required>
+                <input type="text" style="margin: 0.5%;" value="<?php echo($user)?>" name="name" id="name" autocomplete="off" required>
 
 
                 <label for="password" style="margin: 0.5%;"><b>Password</b></label>
-                <input type="password" style="margin: 0.5%;" value="<?php echo($password)?>" name="password" id="password" required>
+                <input type="password" style="margin: 0.5%;" value="<?php echo($password)?>" name="password" id="password" autocomplete="off" required>
 
                 <hr>
 
@@ -50,5 +50,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       $sql_name_update="update users set name ='$username_new' where name = '$user' ";
       $res3 = mysqli_query($db, $sql_name_update);
+
+      header('Location: ../public');
+      exit;
     }
 ?>

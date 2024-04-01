@@ -61,8 +61,8 @@
             <div style = "margin:30px">
                
                <form action = "" method = "post">
-                  <label>Username  :</label><input type = "text" name = "name" class = "box"/><br /><br />
-                  <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
+                  <label>Username  :</label><input type = "text" name = "name" class = "box" autocomplete="off" requiered /><br /><br />
+                  <label>Password  :</label><input type = "password" name = "password" class = "box" autocomplete="off" requiered /><br/><br />
                   <input type = "submit" value = " Log in "/><br />
                </form>
 
