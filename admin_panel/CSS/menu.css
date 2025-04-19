@@ -1,0 +1,12 @@
+.div {
+ width: 10%;
+ float: left;
+}
+
+.div a {
+ background-color: #eee;
+ color: black;
+ display: block;
+ padding: 3%;
+ text-decoration: none;
+}
