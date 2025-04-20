@@ -5,6 +5,7 @@ require '../internal/db_conn.php';
 
 <html lang="en">
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="../CSS/list.css" />
 		<title>List of works</title>

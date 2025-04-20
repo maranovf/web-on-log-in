@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <html lang="en">
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="../CSS/forms.css" />
 		<title>Change password</title>
